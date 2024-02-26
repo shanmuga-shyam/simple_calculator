@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../javafol"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "javafol"
+	}
+}
