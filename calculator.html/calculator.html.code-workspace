@@ -1,13 +1,64 @@
-{
-	"folders": [
-		{
-			"path": "."
-		},
-		{
-			"path": "../javafol"
-		}
-	],
-	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "javafol"
-	}
-}
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css"/>
+  
+  </head>
+  <body>
+    
+    <div class="cal">
+    <input type="text" id="dis" placeholder=""/>
+    
+    <button class="button operator" id="ac" onclick="ac()">AC</button>
+    <button class="button operator" id="del" onclick="del()">Del</button>
+    <button class="button operator" id="mod" onclick="mod()">%</button>
+    <button class="button operator" id="div" onclick="div()">/</button>
+    
+    <button class="button" id="nine" onclick="nine()">9</button>
+    <button class="button" id="eight" onclick="eight()">8</button>
+    <button class="button" id="seven" onclick="seven()">7</button>
+    <button class="button operator" id="mul" onclick="mul()">*</button>
+    
+    <button class="button" id="four" onclick="four()">4</button>
+    <button class="button" id="five" onclick="five()">5</button>
+    <button class="button" id="six" onclick="six()">6</button>
+    <button class="button operator" id="sub" onclick="sub()">-</button>
+
+    <button class="button" id="one" onclick="one()">1</button>
+    <button class="button" id="two" onclick="two()">2</button>
+    <button class="button" id="three" onclick="three()">3</button>
+    <button class="button operator" id="add" onclick="add()">+</button>
+
+    <button class="button" id="zeros" onclick="zeros()">00</button>
+    <button class="button" id="zero" onclick="zero()">0</button>
+    <button class="button" id="dot" onclick="dot()">.</button>
+    <button class="button equal" id="eq" onclick="eq()">=</button>
+    <script>
+      let input = document.getElementById('dis');
+      let buttons = document.querySelectorAll('button');
+      let string = "";
+      let arr = Array.from(buttons);
+      arr.forEach(button =>{
+        button.addEventListener('click',(e)=>{
+          if(e.target.innerHTML == '='){
+            string = eval(string);
+            input.value = string;
+          }
+          else if(e.target.innerHTML == 'AC'){
+            string = " ";
+            input.value = string;
+          }
+          else if(e.target.innerHTML== 'Del'){
+            string = string.substring(0,string.length-1);
+            input.value = string;
+          }
+          else{
+            string += e.target.innerHTML;
+            input.value=string; 
+          }
+        })
+      })
+
+    </script>
+    </div>
+  </body>
+</html>
