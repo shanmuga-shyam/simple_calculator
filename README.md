@@ -6,7 +6,7 @@ A responsive calculator web app with a sleek layout crafted using CSS Grid. Perf
   <li>
     <h2>On Desktop </h2>
     <img src="preview2/Screenshot 2024-02-26 204249.png"><br><br><br><br>   
-
+    <img src="preview2/Screenshot 2024-02-26 204302.png"><br>
   </li>
 
 </ul>
